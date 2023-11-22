@@ -2,15 +2,11 @@ import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Container, Row, Col } from "react-bootstrap";
-import ContentfulClient from "../ContentfulClient";
+import ContentfulClient from "../contentful/ContentfulClient";
 //import "../App.css";
 
 const HomePage: React.FC = () => {
   const [count, setCount] = useState(0);
-
-  const contentfulClient = new ContentfulClient()
-  
-  contentfulClient.getPage('About').then((foo => console.log(foo)));
 
   return (
     <Container fluid>
